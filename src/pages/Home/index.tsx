@@ -1,5 +1,7 @@
+import Sidebar from "../../components/Sidebar/indes";
+
 const Home = () => {
-  return <div>home</div>;
+  return <Sidebar />;
 };
 
 export default Home;
