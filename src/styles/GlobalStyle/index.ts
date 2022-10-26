@@ -46,7 +46,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body{
-    background-color: #EEEEEE;
+    background-color: #F4F3EF;
+    font-family: 'Montserrat', sans-serif;
   }
   
   #root{

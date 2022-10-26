@@ -3,7 +3,7 @@ import { Container } from "./style";
 
 const Sidebar = () => {
   return (
-    <Container>
+    <Container active={true}>
       <p className="top">Controle</p>
       <div className="options">
         <ul>

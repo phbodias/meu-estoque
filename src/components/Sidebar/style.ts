@@ -1,11 +1,17 @@
 import styled from "styled-components";
 
-const Container = styled.div`
-  width: 255px;
+interface Props {
+  active: boolean;
+}
+
+const Container = styled.div<Props>`
+  display: ${(props) => (props.active ? "flex" : "none")};
+  position: fixed;
+  left: 0;
+  width: 235px;
   height: 100vh;
   background-color: #212120;
   color: #ffffff;
-  display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0 10px;
@@ -17,11 +23,10 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     width: 90%;
-    height: 10%;
+    height: 60px;
     min-height: 50px;
-    font-size: 27px;
-    font-weight: 500;
-    border-bottom: solid 1px #ffffff;
+    font-size: 22px;
+    border-bottom: solid 1px #dddddd;
     margin-bottom: 20px;
   }
 
