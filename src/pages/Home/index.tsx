@@ -1,4 +1,5 @@
 import Header from "../../components/Header";
+import PageTitle from "../../components/PageTitle";
 import Sidebar from "../../components/Sidebar";
 
 const Home = () => {
@@ -6,6 +7,11 @@ const Home = () => {
     <>
       <Sidebar />
       <Header actualPage="Home" />
+      <PageTitle
+        title="Página Inicial"
+        subTitle="Visão geral do estoque"
+        iconName="stats-chart-sharp"
+      />
     </>
   );
 };
