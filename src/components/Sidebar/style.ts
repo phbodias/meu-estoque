@@ -5,22 +5,28 @@ interface Props {
 }
 
 const Container = styled.div<Props>`
-  display: ${(props) => (props.active ? "flex" : "none")};
+  width: ${(props) => (props.active ? "235px" : "0")};
+  z-index: 1;
   position: fixed;
   left: 0;
-  width: 235px;
   height: 100vh;
   background-color: #212120;
   color: #ffffff;
   flex-direction: column;
   align-items: center;
-  padding: 0 10px;
+  padding: ${(props) => (props.active ? "0 10px" : "0")};
   box-sizing: border-box;
-  cursor: zoom-in;
+  transition-timing-function: linear;
+  transition-duration: 0.5s;
+  overflow-x: hidden;
+
+  .ion-icon {
+    font-size: 25px;
+  }
 
   .top {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     width: 90%;
     height: 60px;
@@ -54,10 +60,6 @@ const Container = styled.div<Props>`
 
         p {
           margin-left: 7px;
-        }
-
-        .ion-icon {
-          font-size: 25px;
         }
 
         :hover {

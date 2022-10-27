@@ -1,10 +1,26 @@
 import IonIcon from "@reacticons/ionicons";
+import React, { SetStateAction } from "react";
 import { Container } from "./style";
 
-const Sidebar = () => {
+interface Props {
+  active: boolean;
+  setActive: React.Dispatch<SetStateAction<boolean>>;
+}
+
+const Sidebar = ({ active, setActive }: Props) => {
+  const set = () => {
+    setActive(false);
+  };
   return (
-    <Container active={true}>
-      <p className="top">Controle</p>
+    <Container active={active}>
+      <div className="top">
+        <p>Controle</p>
+        <IonIcon
+          name="close-circle-outline"
+          className="ion-icon"
+          onClick={set}
+        ></IonIcon>
+      </div>
       <div className="options">
         <ul>
           <p className="category">Gerenciamento</p>

@@ -1,9 +1,13 @@
 import styled from "styled-components";
 
-const Content = styled.div`
+interface Props {
+  sidebarActive: boolean;
+}
+
+const Content = styled.div<Props>`
   top: 0;
-  left: 235px;
-  width: calc(100vw - 235px);
+  left: ${(props) => (props.sidebarActive ? "235px" : "0")};
+  width: ${(props) => (props.sidebarActive ? "calc(100vw - 235px)" : "100vw")};
   min-width: 360px;
   position: fixed;
   height: 60px;
@@ -14,9 +18,29 @@ const Content = styled.div`
   padding: 25px;
   box-sizing: border-box;
   color: #837f7b;
+  transition-timing-function: linear;
+  transition-duration: 0.5s;
+  overflow-x: hidden;
+  overflow-y: hidden;
 
-  .page {
-    font-size: 22px;
+  .top {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+
+    .ion-icon {
+      font-size: 27px;
+      margin-top: 2px;
+      cursor: pointer;
+    }
+
+    p {
+      margin-left: 5px;
+
+      @media (max-width: 500px) {
+        display: none;
+      }
+    }
   }
 
   .inputSearch {
@@ -51,7 +75,10 @@ const Content = styled.div`
     font-size: 20px;
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 800px) {
+    left: 0;
+    width: 100vw;
+    box-shadow: 0 0 5px 3px;
   }
 `;
 

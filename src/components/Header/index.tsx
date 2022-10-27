@@ -1,16 +1,28 @@
 import IonIcon from "@reacticons/ionicons";
+import React, { SetStateAction } from "react";
 import { Content } from "./style";
 
 interface Props {
   actualPage: string;
+  sidebar: boolean;
+  toggleSideBar: React.Dispatch<SetStateAction<boolean>>;
 }
 
-const Header = ({ actualPage }: Props) => {
+const Header = ({ actualPage, sidebar, toggleSideBar }: Props) => {
   return (
-    <Content>
-      <p className="page">{actualPage}</p>
+    <Content sidebarActive={sidebar}>
+      <div className="top">
+        {!sidebar && (
+          <IonIcon
+            name="menu-outline"
+            className="ion-icon"
+            onClick={() => toggleSideBar(true)}
+          ></IonIcon>
+        )}
+        <p>{actualPage}</p>
+      </div>
       <div className="inputSearch">
-        <input type="text" placeholder="Pesquise"/>
+        <input type="text" placeholder="Pesquise" />
         <IonIcon name="search-outline" className="search"></IonIcon>
       </div>
       <IonIcon name="settings-outline" className="ion-icon settings"></IonIcon>

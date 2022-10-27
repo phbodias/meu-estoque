@@ -48,6 +48,7 @@ const GlobalStyle = createGlobalStyle`
   body{
     background-color: #F4F3EF;
     font-family: 'Montserrat', sans-serif;
+    cursor: zoom-in;
   }
   
   #root{
