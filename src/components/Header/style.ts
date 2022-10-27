@@ -32,6 +32,10 @@ const Content = styled.div<Props>`
       font-size: 27px;
       margin-top: 2px;
       cursor: pointer;
+
+      :hover {
+        color: #34b5b8;
+      }
     }
 
     p {
@@ -69,10 +73,10 @@ const Content = styled.div<Props>`
   }
 
   .settings {
-  }
-
-  .ion-icon {
     font-size: 20px;
+    :hover {
+      color: #34b5b8;
+    }
   }
 
   @media (max-width: 800px) {

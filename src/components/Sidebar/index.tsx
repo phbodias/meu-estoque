@@ -17,7 +17,7 @@ const Sidebar = ({ active, setActive }: Props) => {
         <p>Controle</p>
         <IonIcon
           name="close-circle-outline"
-          className="ion-icon"
+          className="ion-icon ion-top"
           onClick={set}
         ></IonIcon>
       </div>

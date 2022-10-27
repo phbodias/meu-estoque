@@ -22,6 +22,13 @@ const Container = styled.div<Props>`
 
   .ion-icon {
     font-size: 25px;
+    cursor: pointer;
+  }
+
+  .ion-top {
+    :hover {
+      color: #34b5b8;
+    }
   }
 
   .top {
