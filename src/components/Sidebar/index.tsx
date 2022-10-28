@@ -48,13 +48,15 @@ const SclassNameebar = ({ active, setActive }: Props) => {
             </li>
           </Link>
 
-          <li
-            className={selected === 3 ? "selected" : ""}
-            onClick={() => setSelected(3)}
-          >
-            <IonIcon name="layers-outline" className="ion-icon"></IonIcon>
-            <p>Fornecedores</p>
-          </li>
+          <Link to="/providers" className="link">
+            <li
+              className={selected === 3 ? "selected" : ""}
+              onClick={() => setSelected(3)}
+            >
+              <IonIcon name="layers-outline" className="ion-icon"></IonIcon>
+              <p>Fornecedores</p>
+            </li>
+          </Link>
         </ul>
 
         <ul>
