@@ -11,13 +11,12 @@ interface Props {
 const Header = ({ actualPage, sidebar, toggleSideBar }: Props) => {
   return (
     <Content sidebarActive={sidebar}>
-      <div className="top">
+      <div className="showSidebar">
         <IonIcon
           name="menu-outline"
           className="ion-icon showSidebar"
           onClick={() => toggleSideBar(true)}
         ></IonIcon>
-        <p>{actualPage}</p>
       </div>
       <div className="inputSearch">
         <input type="text" placeholder="Pesquise" />

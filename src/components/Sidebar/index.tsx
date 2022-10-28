@@ -1,5 +1,6 @@
 import IonIcon from "@reacticons/ionicons";
 import React, { SetStateAction, useState } from "react";
+import { Link } from "react-router-dom";
 import { Container } from "./style";
 
 interface Props {
@@ -23,20 +24,25 @@ const SclassNameebar = ({ active, setActive }: Props) => {
       <div className="options">
         <ul>
           <p className="category">Gerenciamento</p>
-          <li
-            className={selected === 1 ? "selected" : ""}
-            onClick={() => setSelected(1)}
-          >
-            <IonIcon name="list-circle-outline" className="ion-icon"></IonIcon>
-            <p>Produtos</p>
-          </li>
+
+          <Link to="/categories" className="link">
+            <li
+              className={selected === 1 ? "selected" : ""}
+              onClick={() => setSelected(1)}
+            >
+              <IonIcon name="locate-outline" className="ion-icon"></IonIcon>
+              <p>Categorias</p>
+            </li>
+          </Link>
+
           <li
             className={selected === 2 ? "selected" : ""}
             onClick={() => setSelected(2)}
           >
-            <IonIcon name="locate-outline" className="ion-icon"></IonIcon>
-            <p>Categorias</p>
+            <IonIcon name="list-circle-outline" className="ion-icon"></IonIcon>
+            <p>Produtos</p>
           </li>
+
           <li
             className={selected === 3 ? "selected" : ""}
             onClick={() => setSelected(3)}
@@ -45,8 +51,10 @@ const SclassNameebar = ({ active, setActive }: Props) => {
             <p>Fornecedores</p>
           </li>
         </ul>
+
         <ul>
           <p className="category">Movimentação</p>
+
           <li
             className={selected === 4 ? "selected" : ""}
             onClick={() => setSelected(4)}
@@ -57,6 +65,7 @@ const SclassNameebar = ({ active, setActive }: Props) => {
             ></IonIcon>
             <p>Entradas</p>
           </li>
+
           <li
             className={selected === 5 ? "selected" : ""}
             onClick={() => setSelected(5)}
@@ -65,8 +74,10 @@ const SclassNameebar = ({ active, setActive }: Props) => {
             <p>Saídas</p>
           </li>
         </ul>
+
         <ul>
           <p className="category">Administração</p>
+
           <li
             className={selected === 6 ? "selected" : ""}
             onClick={() => setSelected(6)}
