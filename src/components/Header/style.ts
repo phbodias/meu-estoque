@@ -5,10 +5,6 @@ interface Props {
 }
 
 const Content = styled.div<Props>`
-  top: 0;
-  left: ${(props) => (props.sidebarActive ? "235px" : "0")};
-  width: ${(props) => (props.sidebarActive ? "calc(100vw - 235px)" : "100vw")};
-  position: fixed;
   height: 60px;
   border-bottom: solid 1px #dddddd;
   display: flex;
@@ -21,11 +17,6 @@ const Content = styled.div<Props>`
   overflow-y: hidden;
   transition-timing-function: linear;
   transition-duration: 0.5s;
-
-  * {
-    transition-timing-function: linear;
-    transition-duration: 0.5s;
-  }
 
   .top {
     display: flex;
@@ -84,8 +75,6 @@ const Content = styled.div<Props>`
   }
 
   @media (max-width: 1100px) {
-    left: 0;
-    width: 100vw;
     box-shadow: 0 0 2px 1px;
 
     .top {
