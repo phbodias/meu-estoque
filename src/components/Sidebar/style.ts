@@ -87,14 +87,28 @@ const Container = styled.div<Props>`
 
       .selected {
         color: #59c3e0;
-        -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
-        -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.8);
 
         :hover {
           color: #59c3e0;
         }
       }
+    }
+  }
+
+  .backToHome {
+    width: 100%;
+    height: 30px;
+    margin-top: 20px;
+    background: none;
+    cursor: pointer;
+    color: #c5c0c6;
+    border: none;
+    font-size: ${(props) => (props.active ? "14px" : "0")};
+    text-decoration: underline;
+
+    :hover {
+      color: #59c3e0;
     }
   }
 `;

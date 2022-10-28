@@ -100,6 +100,10 @@ const SclassNameebar = ({ active, setActive }: Props) => {
             <p>Usuários</p>
           </li>
         </ul>
+
+        <Link to="/">
+          <button className="backToHome">Voltar para home</button>
+        </Link>
       </div>
     </Container>
   );
