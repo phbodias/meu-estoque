@@ -1,13 +1,9 @@
 import styled from "styled-components";
 
-interface Props {
-  sidebar: boolean;
-}
-
-const Content = styled.div<Props>`
+const Content = styled.div`
   position: fixed;
   top: 60px;
-  left: ${(props) => (props.sidebar ? "235px" : "0")};
+  left: 235px;
   width: fit-content;
   height: fit-content;
   padding: 20px;
@@ -35,7 +31,7 @@ const Content = styled.div<Props>`
     font-size: 20px;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 1100px) {
     left: 0;
   }
 `;

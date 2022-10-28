@@ -4,7 +4,7 @@ import PageTitle from "../../components/PageTitle";
 import Sidebar from "../../components/Sidebar";
 
 const Home = () => {
-  const [sidebarActive, setSidebarActive] = useState(true);
+  const [sidebarActive, setSidebarActive] = useState(false);
 
   return (
     <>
@@ -18,7 +18,6 @@ const Home = () => {
         title="Página Inicial"
         subTitle="Visão geral do estoque"
         iconName="stats-chart-sharp"
-        sidebar={sidebarActive}
       />
     </>
   );

@@ -6,9 +6,8 @@ interface Props {
 
 const Content = styled.div<Props>`
   top: 0;
-  left: ${(props) => (props.sidebarActive ? "235px" : "0")};
-  width: ${(props) => (props.sidebarActive ? "calc(100vw - 235px)" : "100vw")};
-  min-width: 360px;
+  left: 235px;
+  width: calc(100vw - 235px);
   position: fixed;
   height: 60px;
   border-bottom: solid 1px #dddddd;
@@ -18,10 +17,15 @@ const Content = styled.div<Props>`
   padding: 25px;
   box-sizing: border-box;
   color: #837f7b;
-  transition-timing-function: linear;
-  transition-duration: 0.5s;
   overflow-x: hidden;
   overflow-y: hidden;
+  transition-timing-function: linear;
+  transition-duration: 0.5s;
+
+  * {
+    transition-timing-function: linear;
+    transition-duration: 0.5s;
+  }
 
   .top {
     display: flex;
@@ -38,12 +42,12 @@ const Content = styled.div<Props>`
       }
     }
 
+    .showSidebar {
+      font-size: 0;
+    }
+
     p {
       margin-left: 5px;
-
-      @media (max-width: 500px) {
-        display: none;
-      }
     }
   }
 
@@ -79,10 +83,24 @@ const Content = styled.div<Props>`
     }
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 1100px) {
     left: 0;
     width: 100vw;
-    box-shadow: 0 0 5px 3px;
+    box-shadow: 0 0 2px 1px;
+
+    .top {
+      .showSidebar {
+        font-size: 27px;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    .top {
+      p {
+        font-size: 0;
+      }
+    }
   }
 `;
 

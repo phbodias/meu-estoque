@@ -5,7 +5,7 @@ interface Props {
 }
 
 const Container = styled.div<Props>`
-  width: ${(props) => (props.active ? "235px" : "0")};
+  width: 235px;
   z-index: 1;
   position: fixed;
   left: 0;
@@ -14,11 +14,16 @@ const Container = styled.div<Props>`
   color: #ffffff;
   flex-direction: column;
   align-items: center;
-  padding: ${(props) => (props.active ? "0 10px" : "0")};
+  padding: 0 10px;
   box-sizing: border-box;
+  overflow-x: hidden;
   transition-timing-function: linear;
   transition-duration: 0.5s;
-  overflow-x: hidden;
+
+  * {
+    transition-timing-function: linear;
+    transition-duration: 0.5s;
+  }
 
   .ion-icon {
     font-size: 25px;
@@ -26,9 +31,7 @@ const Container = styled.div<Props>`
   }
 
   .ion-top {
-    :hover {
-      color: #34b5b8;
-    }
+    font-size: 0;
   }
 
   .top {
@@ -55,7 +58,7 @@ const Container = styled.div<Props>`
       }
 
       li {
-        width: fit-content;
+        width: 200px;
         height: 30px;
         display: flex;
         align-items: center;
@@ -71,6 +74,52 @@ const Container = styled.div<Props>`
 
         :hover {
           color: #ffffff;
+        }
+      }
+
+      .selected {
+        color: #59c3e0;
+        -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+        -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.8);
+
+        :hover {
+          color: #59c3e0;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1100px) {
+    width: ${(props) => (props.active ? "235px" : "0")};
+    padding: ${(props) => (props.active ? "0 10px" : "0")};
+
+    .ion-icon {
+      font-size: ${(props) => (props.active ? "25px" : "0")};
+    }
+
+    .ion-top {
+      font-size: ${(props) => (props.active ? "27px" : "0")};
+
+      :hover {
+        color: #34b5b8;
+      }
+    }
+
+    .top {
+      width: ${(props) => (props.active ? "90%" : "0")};
+      font-size: ${(props) => (props.active ? "22px" : "0")};
+    }
+
+    .options {
+      ul {
+        .category {
+          font-size: ${(props) => (props.active ? "17px" : "0")};
+        }
+
+        li {
+          width: ${(props) => (props.active ? "200px" : "0")};
+          font-size: ${(props) => (props.active ? "15px" : "0")};
         }
       }
     }
