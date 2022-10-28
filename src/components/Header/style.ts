@@ -35,7 +35,7 @@ const Content = styled.div<Props>`
   .inputSearch {
     display: flex;
     align-items: center;
-    width: 30vw;
+    width: ${(props) => (props.sidebarActive ? "20%" : "30%")};
     min-width: 200px;
 
     input {
@@ -49,6 +49,10 @@ const Content = styled.div<Props>`
       padding-right: 30px;
       box-sizing: border-box;
       outline: none;
+
+      :focus {
+        min-width: 250px;
+      }
     }
 
     .search {
