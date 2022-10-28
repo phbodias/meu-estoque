@@ -18,6 +18,7 @@ const Home = () => {
         title="Página Inicial"
         subTitle="Visão geral do estoque"
         iconName="stats-chart-sharp"
+        sidebar={sidebarActive}
       />
     </>
   );

@@ -1,9 +1,13 @@
 import styled from "styled-components";
 
-const Content = styled.div`
+interface Props {
+  sidebar: boolean;
+}
+
+const Content = styled.div<Props>`
   position: fixed;
   top: 60px;
-  left: 235px;
+  left: ${(props) => (props.sidebar ? "235px" : "0")};
   width: fit-content;
   height: fit-content;
   padding: 20px;

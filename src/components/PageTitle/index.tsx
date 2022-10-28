@@ -5,11 +5,12 @@ interface Props {
   title: string;
   subTitle: string;
   iconName: any;
+  sidebar: boolean;
 }
 
-const PageTitle = ({ title, subTitle, iconName }: Props) => {
+const PageTitle = ({ title, subTitle, iconName, sidebar }: Props) => {
   return (
-    <Content>
+    <Content sidebar={sidebar}>
       <div className="title">
         <IonIcon name={iconName} className="ion-icon settings"></IonIcon>
         <p>{title}</p>

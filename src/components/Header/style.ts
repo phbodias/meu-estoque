@@ -6,8 +6,8 @@ interface Props {
 
 const Content = styled.div<Props>`
   top: 0;
-  left: 235px;
-  width: calc(100vw - 235px);
+  left: ${(props) => (props.sidebarActive ? "235px" : "0")};
+  width: ${(props) => (props.sidebarActive ? "calc(100vw - 235px)" : "100vw")};
   position: fixed;
   height: 60px;
   border-bottom: solid 1px #dddddd;
@@ -43,7 +43,7 @@ const Content = styled.div<Props>`
     }
 
     .showSidebar {
-      font-size: 0;
+      font-size: ${(props) => (props.sidebarActive ? "0" : "27px")};
     }
 
     p {
