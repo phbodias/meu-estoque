@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import { RightSide } from "./style";
 import Home from "./pages/Home";
 import Categories from "./pages/Categories";
+import Products from "./pages/Products";
 
 const App = () => {
   const [sidebarActive, setSidebarActive] = useState(false);
@@ -22,6 +23,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/categories" element={<Categories />} />
+          <Route path="/products" element={<Products />} />
         </Routes>
       </RightSide>
     </BrowserRouter>
