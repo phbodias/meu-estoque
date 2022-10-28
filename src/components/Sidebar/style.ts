@@ -20,6 +20,10 @@ const Container = styled.div<Props>`
   transition-timing-function: linear;
   transition-duration: 0.5s;
 
+  .link {
+    text-decoration: none;
+  }
+
   * {
     transition-timing-function: linear;
     transition-duration: 0.5s;
