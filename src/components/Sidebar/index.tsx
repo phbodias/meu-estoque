@@ -62,24 +62,28 @@ const SclassNameebar = ({ active, setActive }: Props) => {
         <ul>
           <p className="category">Movimentação</p>
 
-          <li
-            className={selected === 4 ? "selected" : ""}
-            onClick={() => setSelected(4)}
-          >
-            <IonIcon
-              name="arrow-forward-outline"
-              className="ion-icon"
-            ></IonIcon>
-            <p>Entradas</p>
-          </li>
+          <Link to="/movimentations/inputs" className="link">
+            <li
+              className={selected === 4 ? "selected" : ""}
+              onClick={() => setSelected(4)}
+            >
+              <IonIcon
+                name="arrow-forward-outline"
+                className="ion-icon"
+              ></IonIcon>
+              <p>Entradas</p>
+            </li>
+          </Link>
 
-          <li
-            className={selected === 5 ? "selected" : ""}
-            onClick={() => setSelected(5)}
-          >
-            <IonIcon name="arrow-back-outline" className="ion-icon"></IonIcon>
-            <p>Saídas</p>
-          </li>
+          <Link to="/movimentations/outputs" className="link">
+            <li
+              className={selected === 5 ? "selected" : ""}
+              onClick={() => setSelected(5)}
+            >
+              <IonIcon name="arrow-back-outline" className="ion-icon"></IonIcon>
+              <p>Saídas</p>
+            </li>
+          </Link>
         </ul>
 
         <ul>
