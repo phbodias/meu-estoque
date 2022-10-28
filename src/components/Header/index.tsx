@@ -12,13 +12,11 @@ const Header = ({ actualPage, sidebar, toggleSideBar }: Props) => {
   return (
     <Content sidebarActive={sidebar}>
       <div className="top">
-        {!sidebar && (
-          <IonIcon
-            name="menu-outline"
-            className="ion-icon"
-            onClick={() => toggleSideBar(true)}
-          ></IonIcon>
-        )}
+        <IonIcon
+          name="menu-outline"
+          className="ion-icon showSidebar"
+          onClick={() => toggleSideBar(true)}
+        ></IonIcon>
         <p>{actualPage}</p>
       </div>
       <div className="inputSearch">

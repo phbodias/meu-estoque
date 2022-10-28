@@ -35,7 +35,7 @@ const Content = styled.div<Props>`
     font-size: 20px;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 1100px) {
     left: 0;
   }
 `;

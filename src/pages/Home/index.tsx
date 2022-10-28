@@ -4,7 +4,7 @@ import PageTitle from "../../components/PageTitle";
 import Sidebar from "../../components/Sidebar";
 
 const Home = () => {
-  const [sidebarActive, setSidebarActive] = useState(true);
+  const [sidebarActive, setSidebarActive] = useState(false);
 
   return (
     <>
