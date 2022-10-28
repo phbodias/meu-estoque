@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Header from "./components/Header";
-import Sidebar from "./components/Sidebar";
-import { RightSide } from "./components/style";
-import Home from "./pages/Home";
 import GlobalStyle from "./styles/GlobalStyle";
+import Sidebar from "./components/Sidebar";
+import Header from "./components/Header";
+import { RightSide } from "./style";
+import Home from "./pages/Home";
 
 const App = () => {
   const [sidebarActive, setSidebarActive] = useState(false);
@@ -25,6 +25,5 @@ const App = () => {
     </BrowserRouter>
   );
 };
-
 
 export default App;

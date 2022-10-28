@@ -18,28 +18,18 @@ const Content = styled.div<Props>`
   transition-timing-function: linear;
   transition-duration: 0.5s;
 
-  .top {
-    display: flex;
-    align-items: center;
-    font-size: 25px;
+  .ion-icon {
+    font-size: 27px;
+    margin-top: 2px;
+    cursor: pointer;
 
-    .ion-icon {
-      font-size: 27px;
-      margin-top: 2px;
-      cursor: pointer;
-
-      :hover {
-        color: #34b5b8;
-      }
+    :hover {
+      color: #34b5b8;
     }
+  }
 
-    .showSidebar {
-      font-size: ${(props) => (props.sidebarActive ? "0" : "27px")};
-    }
-
-    p {
-      margin-left: 5px;
-    }
+  .showSidebar {
+    display: ${(props) => (props.sidebarActive ? "none" : "block")};
   }
 
   .inputSearch {
@@ -77,18 +67,8 @@ const Content = styled.div<Props>`
   @media (max-width: 1100px) {
     box-shadow: 0 0 2px 1px;
 
-    .top {
-      .showSidebar {
-        font-size: 27px;
-      }
-    }
-  }
-
-  @media (max-width: 500px) {
-    .top {
-      p {
-        font-size: 0;
-      }
+    .showSidebar {
+      display: block;
     }
   }
 `;
