@@ -1,6 +1,7 @@
 import IonIcon from "@reacticons/ionicons";
-import React, { SetStateAction, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { SetStateAction, useState, useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import ActualPageContext from "../../contexts/pageContext";
 import { Container } from "./style";
 
 interface Props {
@@ -9,6 +10,23 @@ interface Props {
 }
 
 const SclassNameebar = ({ active, setActive }: Props) => {
+  const navigate = useNavigate();
+  const { actualPage, setActualPage } = useContext(ActualPageContext);
+
+  const pages = {
+    1: "",
+    2: "products",
+    3: "providers",
+    4: "movimentations/inputs",
+    5: "movimentations/outputs",
+    6: "",
+  };
+
+  /* function changePage(index: number) {
+    const page: number = Number(index) || 1;
+    navigate(`/${pages[page]}`);
+  }
+ */
   const [selected, setSelected] = useState(0);
 
   return (
@@ -100,6 +118,10 @@ const SclassNameebar = ({ active, setActive }: Props) => {
             <p>Usuários</p>
           </li>
         </ul>
+
+        <Link to="/" onClick={() => setSelected(0)}>
+          <button className="backToHome">Voltar para home</button>
+        </Link>
       </div>
     </Container>
   );
