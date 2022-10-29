@@ -24,11 +24,6 @@ const Container = styled.div<Props>`
     text-decoration: none;
   }
 
-  * {
-    transition-timing-function: linear;
-    transition-duration: 0.5s;
-  }
-
   .ion-icon {
     font-size: ${(props) => (props.active ? "25px" : "0")};
     cursor: pointer;
@@ -88,6 +83,8 @@ const Container = styled.div<Props>`
       .selected {
         color: #59c3e0;
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.8);
+        transition-timing-function: linear;
+        transition-duration: 0.5s;
 
         :hover {
           color: #59c3e0;
@@ -98,6 +95,7 @@ const Container = styled.div<Props>`
 
   .backToHome {
     width: 100%;
+    min-width: 200px;
     height: 30px;
     margin-top: 20px;
     background: none;

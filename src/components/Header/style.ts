@@ -27,11 +27,7 @@ const Content = styled.div<Props>`
       color: #34b5b8;
     }
   }
-
-  .showSidebar {
-    display: ${(props) => (props.sidebarActive ? "none" : "block")};
-  }
-
+  
   .inputSearch {
     display: flex;
     align-items: center;
